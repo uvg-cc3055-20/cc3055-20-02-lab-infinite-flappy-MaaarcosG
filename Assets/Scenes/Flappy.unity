@@ -754,6 +754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1984546217}
   - component: {fileID: 1984546218}
+  - component: {fileID: 1984546219}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -788,3 +789,16 @@ MonoBehaviour:
   column: {fileID: 1995524529995388, guid: 7b0cf3ac6c1199248b36f561aa8248ae, type: 2}
   spawnTime: 0
   elapseTime: 0
+--- !u!114 &1984546219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1984546216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c06f53528b03f09488d0ceafbae5a61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOver: 0
+  score: 0
