@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
-    public bool gameOver;
-    public int score;
+    public bool gameOver = false;
+    public int score = 0;
     public static GameController instance;
 
 	// Use this for initialization
 	void Start () {
         /*Inicializamos los atributos*/
-        gameOver = false;
-        score = 0;
         instance = this;
 
 	}
