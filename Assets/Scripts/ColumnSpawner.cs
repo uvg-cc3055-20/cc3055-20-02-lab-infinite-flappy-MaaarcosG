@@ -15,17 +15,20 @@ public class ColumnSpawner : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*Condicion para detectar el elapseTime*/
-        if (elapseTime < spawnTime)
+        if(GameController.instance.gameOver == false)
         {
-            elapseTime += Time.deltaTime;
-        }
-        else
-        {
-            /*Si es mayor a 0 se agregara una columna*/
-            float random = Random.Range(-2f, 2f);
-            Instantiate(column, new Vector3(8, random, 0), Quaternion.identity);
-            elapseTime = 0;
+            /*Condicion para detectar el elapseTime*/
+            if (elapseTime < spawnTime)
+            {
+                elapseTime += Time.deltaTime;
+            }
+            else
+            {
+                /*Si es mayor a 0 se agregara una columna*/
+                float random = Random.Range(-2f, 2f);
+                Instantiate(column, new Vector3(8, random, 0), Quaternion.identity);
+                elapseTime = 0;
+            }
         }
 	}
 }

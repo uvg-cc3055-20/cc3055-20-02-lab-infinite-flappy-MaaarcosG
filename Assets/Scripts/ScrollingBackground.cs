@@ -13,12 +13,15 @@ public class ScrollingBackground : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*Funcion para que el Blackground se mueva*/
-        transform.Translate(Vector3.left * scrollingSpeed * Time.deltaTime);
-        /*Funcion que sirve para que se repita el blackground*/
-        if (transform.position.x < -20.4f)
+        if(GameController.instance.gameOver == false)
         {
-            transform.position = new Vector3(20.4f, transform.position.y, transform.position.z);
+            /*Funcion para que el Blackground se mueva*/
+            transform.Translate(Vector3.left * scrollingSpeed * Time.deltaTime);
+            /*Funcion que sirve para que se repita el blackground*/
+            if (transform.position.x < -20.4f)
+            {
+                transform.position = new Vector3(20.4f, transform.position.y, transform.position.z);
+            }
         }
 	}
 }
